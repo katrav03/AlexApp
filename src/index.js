@@ -8,6 +8,8 @@ import App from "./components/App";
 import * as serviceWorker from "./serviceWorker";
 import { LayoutProvider } from "./context/LayoutContext";
 import { UserProvider } from "./context/UserContext";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './style.css'
 
 ReactDOM.render(
   <LayoutProvider>

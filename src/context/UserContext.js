@@ -1,5 +1,5 @@
 import React from "react";
-
+import APIService from '../service/services'
 var UserStateContext = React.createContext();
 var UserDispatchContext = React.createContext();
 
@@ -49,21 +49,26 @@ export { UserProvider, useUserState, useUserDispatch, loginUser, signOut };
 
 // ###########################################################
 
-function loginUser(dispatch, login, password, history, setIsLoading, setError) {
+async function loginUser(dispatch, login, password, history, setIsLoading, setError) {
   setError(false);
   setIsLoading(true);
-
-  if (!!login && !!password) {
-    setTimeout(() => {
-      localStorage.setItem('id_token', 1)
-      setError(null)
-      setIsLoading(false)
-      dispatch({ type: 'LOGIN_SUCCESS' })
-
-      history.push('/app/dashboard')
-    }, 2000);
-  } else {
-    dispatch({ type: "LOGIN_FAILURE" });
+  let dataAuth = {
+    "email": login,
+    "password": password
+  }
+  let flag = await APIService.login(dataAuth)
+  console.log('FLag Valid -> ', flag)
+  if (flag) {
+    console.log('Working Fine')
+    setError(null)
+    setIsLoading(false)
+    dispatch({ type: 'LOGIN_SUCCESS' })
+    history.push('/app/dashboard')
+  }
+  else {
+    // dispatch({ type: "LOGIN_FAILURE" });
+    window.alert('Please check your credentials')
+    history.push('/login')
     setError(true);
     setIsLoading(false);
   }

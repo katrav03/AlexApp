@@ -125,7 +125,7 @@ export default {
         fontSize: "0.95rem",
       },
       body: {
-        fontSize: "0.95rem",
+        fontSize: "14px",
       },
     },
   },

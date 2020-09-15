@@ -137,11 +137,11 @@ export default function Header(props) {
           )}
         </IconButton>
         <Typography variant="h6" weight="medium" className={classes.logotype}>
-          React Material Admin
+          Admin Panel
         </Typography>
         <div className={classes.grow} />
-        <Button component={Link} href="https://flatlogic.com/templates/react-material-admin-full" variant={"outlined"} color={"secondary"} style={{marginRight: 24}}>Unlock full version</Button>
-        <div
+        {/* <Button component={Link} href="https://flatlogic.com/templates/react-material-admin-full" variant={"outlined"} color={"secondary"} style={{marginRight: 24}}>Unlock full version</Button> */}
+        {/* <div
           className={classNames(classes.search, {
             [classes.searchFocused]: isSearchOpen,
           })}
@@ -195,17 +195,18 @@ export default function Header(props) {
           >
             <MailIcon classes={{ root: classes.headerIcon }} />
           </Badge>
-        </IconButton>
+        </IconButton> */}
         <IconButton
           aria-haspopup="true"
           color="inherit"
           className={classes.headerMenuButton}
           aria-controls="profile-menu"
           onClick={e => setProfileMenu(e.currentTarget)}
+          style={{marginRight:'30px',fontSize:'28px !important',color:'white !important'}}
         >
           <AccountIcon classes={{ root: classes.headerIcon }} />
         </IconButton>
-        <Menu
+        {/* <Menu
           id="mail-menu"
           open={Boolean(mailMenu)}
           anchorEl={mailMenu}
@@ -277,7 +278,7 @@ export default function Header(props) {
               <Notification {...notification} typographyVariant="inherit" />
             </MenuItem>
           ))}
-        </Menu>
+        </Menu> */}
         <Menu
           id="profile-menu"
           open={Boolean(profileMenu)}
@@ -287,7 +288,7 @@ export default function Header(props) {
           classes={{ paper: classes.profileMenu }}
           disableAutoFocusItem
         >
-          <div className={classes.profileMenuUser}>
+          {/* <div className={classes.profileMenuUser}>
             <Typography variant="h4" weight="medium">
               John Smith
             </Typography>
@@ -323,7 +324,7 @@ export default function Header(props) {
             )}
           >
             <AccountIcon className={classes.profileMenuIcon} /> Messages
-          </MenuItem>
+          </MenuItem> */}
           <div className={classes.profileMenuUser}>
             <Typography
               className={classes.profileMenuLink}

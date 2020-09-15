@@ -40,7 +40,7 @@ function Login(props) {
     <Grid container className={classes.container}>
       <div className={classes.logotypeContainer}>
         <img src={logo} alt="logo" className={classes.logotypeImage} />
-        <Typography className={classes.logotypeText}>Material Admin</Typography>
+        <Typography className={classes.logotypeText}>Admin Panel</Typography>
       </div>
       <div className={classes.formContainer}>
         <div className={classes.form}>
@@ -52,11 +52,11 @@ function Login(props) {
             centered
           >
             <Tab label="Login" classes={{ root: classes.tab }} />
-            <Tab label="New User" classes={{ root: classes.tab }} />
+            {/* <Tab label="New User" classes={{ root: classes.tab }} /> */}
           </Tabs>
           {activeTabId === 0 && (
             <React.Fragment>
-              <Typography variant="h1" className={classes.greeting}>
+              {/* <Typography variant="h1" className={classes.greeting}>
                 Good Morning, User
               </Typography>
               <Button size="large" className={classes.googleButton}>
@@ -67,12 +67,12 @@ function Login(props) {
                 <div className={classes.formDivider} />
                 <Typography className={classes.formDividerWord}>or</Typography>
                 <div className={classes.formDivider} />
-              </div>
-              <Fade in={error}>
+              </div> */}
+              {/* <Fade in={error}>
                 <Typography color="secondary" className={classes.errorMessage}>
                   Something is wrong with your login or password :(
                 </Typography>
-              </Fade>
+              </Fade> */}
               <TextField
                 id="email"
                 InputProps={{
@@ -128,125 +128,21 @@ function Login(props) {
                     Login
                   </Button>
                 )}
-                <Button
+                {/* <Button
                   color="primary"
                   size="large"
                   className={classes.forgetButton}
                 >
                   Forget Password
-                </Button>
+                </Button> */}
               </div>
             </React.Fragment>
           )}
-          {activeTabId === 1 && (
-            <React.Fragment>
-              <Typography variant="h1" className={classes.greeting}>
-                Welcome!
-              </Typography>
-              <Typography variant="h2" className={classes.subGreeting}>
-                Create your account
-              </Typography>
-              <Fade in={error}>
-                <Typography color="secondary" className={classes.errorMessage}>
-                  Something is wrong with your login or password :(
-                </Typography>
-              </Fade>
-              <TextField
-                id="name"
-                InputProps={{
-                  classes: {
-                    underline: classes.textFieldUnderline,
-                    input: classes.textField,
-                  },
-                }}
-                value={nameValue}
-                onChange={e => setNameValue(e.target.value)}
-                margin="normal"
-                placeholder="Full Name"
-                type="text"
-                fullWidth
-              />
-              <TextField
-                id="email"
-                InputProps={{
-                  classes: {
-                    underline: classes.textFieldUnderline,
-                    input: classes.textField,
-                  },
-                }}
-                value={loginValue}
-                onChange={e => setLoginValue(e.target.value)}
-                margin="normal"
-                placeholder="Email Adress"
-                type="email"
-                fullWidth
-              />
-              <TextField
-                id="password"
-                InputProps={{
-                  classes: {
-                    underline: classes.textFieldUnderline,
-                    input: classes.textField,
-                  },
-                }}
-                value={passwordValue}
-                onChange={e => setPasswordValue(e.target.value)}
-                margin="normal"
-                placeholder="Password"
-                type="password"
-                fullWidth
-              />
-              <div className={classes.creatingButtonContainer}>
-                {isLoading ? (
-                  <CircularProgress size={26} />
-                ) : (
-                  <Button
-                    onClick={() =>
-                      loginUser(
-                        userDispatch,
-                        loginValue,
-                        passwordValue,
-                        props.history,
-                        setIsLoading,
-                        setError,
-                      )
-                    }
-                    disabled={
-                      loginValue.length === 0 ||
-                      passwordValue.length === 0 ||
-                      nameValue.length === 0
-                    }
-                    size="large"
-                    variant="contained"
-                    color="primary"
-                    fullWidth
-                    className={classes.createAccountButton}
-                  >
-                    Create your account
-                  </Button>
-                )}
-              </div>
-              <div className={classes.formDividerContainer}>
-                <div className={classes.formDivider} />
-                <Typography className={classes.formDividerWord}>or</Typography>
-                <div className={classes.formDivider} />
-              </div>
-              <Button
-                size="large"
-                className={classnames(
-                  classes.googleButton,
-                  classes.googleButtonCreating,
-                )}
-              >
-                <img src={google} alt="google" className={classes.googleIcon} />
-                &nbsp;Sign in with Google
-              </Button>
-            </React.Fragment>
-          )}
+          
         </div>
-        <Typography color="primary" className={classes.copyright}>
+        {/* <Typography color="primary" className={classes.copyright}>
           © 2014-2019 Flatlogic, LLC. All rights reserved.
-        </Typography>
+        </Typography> */}
       </div>
     </Grid>
   );

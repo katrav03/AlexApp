@@ -1,0 +1,24 @@
+.makeStyles-content-2{
+    flex-grow:0 !important;
+    margin-top: 5%;
+}
+.makeStyles-drawerOpen-40{
+    width: 200px !important;
+}
+.makeStyles-appBar-6{
+    /* width: 240px !important; */
+}
+.MuiAppBar-positionFixed{
+    right: initial !important;
+}
+.makeStyles-headerMenuButton-20{
+    font-size: 28px !important;
+    color: white !important;
+}
+/* .page-item.active .page-link{
+    z-index: 3 !important;
+    color: #007bff !important;
+    background-color: white !important;
+    border: none !important;
+    outline: none !important;
+} */

@@ -7,7 +7,7 @@ export default makeStyles(theme => ({
     marginLeft: theme.spacing(2.5),
     marginRight: theme.spacing(2.5),
     fontWeight: 500,
-    fontSize: 18,
+    fontSize: 14,
     whiteSpace: "nowrap",
     [theme.breakpoints.down("xs")]: {
       display: "none",
@@ -101,7 +101,7 @@ export default makeStyles(theme => ({
     marginRight: theme.spacing(2),
   },
   headerIcon: {
-    fontSize: 28,
+    fontSize: 16,
     color: "rgba(255, 255, 255, 0.35)",
   },
   headerIconCollapse: {
@@ -123,7 +123,7 @@ export default makeStyles(theme => ({
     color: theme.palette.text.hint,
   },
   profileMenuLink: {
-    fontSize: 16,
+    fontSize: 15,
     textDecoration: "none",
     "&:hover": {
       cursor: "pointer",
